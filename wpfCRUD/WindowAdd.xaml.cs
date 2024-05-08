@@ -25,7 +25,7 @@ namespace wpfCRUD
         public WindowAdd()
         {
             InitializeComponent();
-            Person = new Person("Béla", 32);
+            Person = new Person("", 18);
             spInput.DataContext = Person;
 
             db = new PersonContext();
