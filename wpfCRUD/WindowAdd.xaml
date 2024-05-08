@@ -28,9 +28,9 @@
                 <TextBox Text="{Binding Name}" FontSize="24" Margin="10" Padding="0, 10" Width="361" Background="Pink"></TextBox>
                 <TextBox Text="{Binding Age}" FontSize="24" Margin="10" Padding="0, 10" Background="HotPink"></TextBox>
             </StackPanel>
-            <Button Content="Save" Grid.Row="2" FontSize="24" Margin="10,20,240,20" Padding="0,10" Width="150" Background="#03C04A"></Button>
-            <Button Content="Close" Grid.Row="2" FontSize="24" Margin="200,20,50,20" Padding="0,10" Width="150" Background="#03C04A"></Button>
-            <Button Content="View" Grid.Row="2" FontSize="24" Margin="10,20,240,20" Padding="0,10" Width="150" Background="#03C04A" Grid.Column="1" Click="Button_Click"/>
+            <Button Content="Save" Click="Button_Click" Grid.Row="2" FontSize="24" Margin="10,20,240,20" Padding="0,10" Width="150" Background="#03C04A"></Button>
+            <Button Content="Close" Grid.Row="2" FontSize="24" Margin="200,20,50,20" Padding="0,10" Width="150" Background="#03C04A" Click="Button_Click_1"></Button>
+            <Button Content="View" Grid.Row="2" FontSize="24" Margin="10,20,240,20" Padding="0,10" Width="150" Background="#03C04A" Grid.Column="1"/>
         </Grid>
     </Border>
 </Window>

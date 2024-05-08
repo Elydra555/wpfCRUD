@@ -20,11 +20,15 @@ namespace wpfCRUD
     public partial class WindowAdd : Window
     {
         Person Person;
+        PersonContext db;
+
         public WindowAdd()
         {
             InitializeComponent();
             Person = new Person("Béla", 32);
             spInput.DataContext = Person;
+
+            db = new PersonContext();
         }
 
         private void TextBlock_PreviewMouseDown(object sender, MouseButtonEventArgs e)
@@ -37,10 +41,15 @@ namespace wpfCRUD
             this.DragMove();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            Person.Name = "Dezső";
-            MessageBox.Show(Person.ToString());
+            //Person.Name = "Dezső";
+            //MessageBox.Show(Person.ToString());
+            Person.Id = 0;
+            db.Persons.Add(Person);
+            await db.SaveChangesAsync();
+            Person.Name = "";
+            Person.Age = 18;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
