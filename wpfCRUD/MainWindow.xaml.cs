@@ -29,7 +29,7 @@ namespace wpfCRUD
         {
             WindowAdd windowAdd = new WindowAdd();
             windowAdd.Owner = this;
-            windowAdd.Show();
+            windowAdd.ShowDialog();
         }
     }
 }

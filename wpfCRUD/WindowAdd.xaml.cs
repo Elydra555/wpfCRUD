@@ -19,9 +19,12 @@ namespace wpfCRUD
     /// </summary>
     public partial class WindowAdd : Window
     {
+        Person Person;
         public WindowAdd()
         {
             InitializeComponent();
+            Person = new Person("Béla", 32);
+            spInput.DataContext = Person;
         }
 
         private void TextBlock_PreviewMouseDown(object sender, MouseButtonEventArgs e)
@@ -32,6 +35,12 @@ namespace wpfCRUD
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Person.Name = "Dezső";
+            MessageBox.Show(Person.ToString());
         }
     }
 }
