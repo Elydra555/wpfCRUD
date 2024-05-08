@@ -42,5 +42,10 @@ namespace wpfCRUD
             Person.Name = "Dezső";
             MessageBox.Show(Person.ToString());
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
